@@ -15,7 +15,17 @@ public class Facture implements Serializable {
     private Date dateFacture;
     private int idUser ;
     private String titre;
+
+    private int Discount;
     private int idCommande;
+
+    public int getDiscount() {
+        return Discount;
+    }
+
+    public void setDiscount(int discount) {
+        Discount = discount;
+    }
 
     public int getIdFacture() {
         return idFacture;
@@ -61,12 +71,12 @@ public class Facture implements Serializable {
         super();
     }
 
-    public Facture(int idFacture, Date dateFacture, int idUser, String titre, int idCommande) {
-        super();
+      public Facture(int idFacture, Date dateFacture, int idUser, String titre, int discount, int idCommande) {
         this.idFacture = idFacture;
         this.dateFacture = dateFacture;
         this.idUser = idUser;
         this.titre = titre;
+        this.Discount = discount;
         this.idCommande = idCommande;
     }
 }
